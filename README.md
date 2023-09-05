@@ -170,3 +170,38 @@ Now, in order to find the right range for $f_c$ , we must know that twice this f
 ![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/bc6f25ea-e950-44ae-b278-a6e714f9a9bc)
 
 <p align="justify"> As we expected in the figures, in the LSB mode, the Fourier transform part should be seen at low frequencies, and in USB, the Fourier transform should be seen with high frequencies. The Fourier transform of the modulated signal was in the form of two triangular signals at the frequencies of 100 and -100 Hz (the same as the carrier frequency), so according to the figure, the low frequencies should be in the first diagram and the high frequencies should be in the second diagram. </p>
+
+## Hilbert Transform and Envelope Detector
+* The Hilbert transform relation in the discrete domain is as follows:
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/7a74b5b2-0f91-4cc6-8a7a-fab8b70b0646)
+
+The relation we have for the Hilbert transform in the continuous domain is as follows:
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/12b04854-d6bd-494e-bca3-b15815897d12)
+
+For the time domain, the discrete Hilbert transform is as follows:
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/155a0e72-7718-41c1-a743-e68b78aed1ec)
+
+* The periodic message signal is defined as follows. Find its Hilbert transform using the "hilbert" function.
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/594dabaf-8cc9-4c70-9810-492606da0ba5)
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/d34d54f1-a86a-4315-9a25-34f4e83735b3)
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/5bcb4d3c-d739-4f22-b3b5-83c3898f22e1)
+
+* <p align="justify"> Using the appropriate frequency that you determined in the second part, modulate this message as 𝐷𝑆𝐵 with carrier signal amplitude equal to 1 and plot it in the time domain. </p>
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/9ff19ed4-b2ca-435b-af1c-6ade81f04476)
+
+* Recover the message signal using the envelope detector (obtained by Hilbert transform).
+
+<p align="justify"> According to the graphs we plotted above, if we plot the size of the Hilbert transform of the modulated signal in the form of DSB, we can see that the same signal as the original message is revealed. So, in this domain detection method, the signal of the original message can be recovered with a relatively good approximation. </p>
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/1aa18c1b-dc7a-4246-a8bb-cf3c74648672)
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/852c22c6-0940-4a71-a17f-227837b8cbe1)
+
+![image](https://github.com/SogolGoodarzi/AM-DSB-SSB-Modulations/assets/125180530/3e4fa40b-b273-48f0-bb6a-c04be1f7442d)
